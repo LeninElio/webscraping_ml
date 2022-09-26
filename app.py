@@ -49,7 +49,9 @@ def descargarinfo():
         else:
             return 'Error'
 
+        
         # print(producto, limite)
+
         # return {'asd': 'asddsfsd'}
 
     return render_template('index.html')
