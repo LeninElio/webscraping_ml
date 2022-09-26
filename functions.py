@@ -66,7 +66,7 @@ def limite_productos(producto, limite):
             urls = [i.get('href') for i in urls]
             lista_url.extend(urls)
             # Precios
-            precio = "//li[@class='ui-search-layout__item']//div[@class='ui-search-result__content-columns shops__content-columns']//div[1]//div[1]//div[1]//div[1]//div[1]//span[1]//span[@class='price-tag-amount']//span[2]"
+            precio = "//li[contains(@class, 'ui-search-layout__item')]//div[@class='ui-search-result__content-columns shops__content-columns']//div[1]//div[1]//div[1]//div[1]//div[1]//span[1]//span[@class='price-tag-amount']//span[2]"
             dom = etree.HTML(str(soup))
             precios = dom.xpath(precio)
             precios = [i.text for i in precios]
