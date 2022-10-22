@@ -18,7 +18,7 @@ def todos_productos(producto):
             titulo = [i.text for i in titulo]
             lista_titulo.extend(titulo)
             # Traemos las URL
-            urls = soup.find_all('a', attrs={'class': 'ui-search-item__group__element shops-custom-secondary-font ui-search-link'})
+            urls = soup.find_all('a', attrs={'class': 'ui-search-item__group__element shops__items-group-details ui-search-link'})
             urls = [i.get('href') for i in urls]
             lista_url.extend(urls)
             # Precios
@@ -62,7 +62,7 @@ def limite_productos(producto, limite):
             titulo = [i.text for i in titulo]
             lista_titulo.extend(titulo)
             # Traemos las URL
-            urls = soup.find_all('a', attrs={'class': 'ui-search-item__group__element shops-custom-secondary-font ui-search-link'})
+            urls = soup.find_all('a', attrs={'class': 'ui-search-item__group__element shops__items-group-details ui-search-link'})
             urls = [i.get('href') for i in urls]
             lista_url.extend(urls)
             # Precios
